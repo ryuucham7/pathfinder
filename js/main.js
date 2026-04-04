@@ -24,12 +24,14 @@ const navLinks = document.querySelector(".nav-links");
 
 if (toggle) {
   toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("is-open");
+    const isOpen = navLinks.classList.toggle("is-open");
+    document.body.style.overflow = isOpen ? "hidden" : "";
   });
 
   navLinks.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("is-open");
+      document.body.style.overflow = "";
     });
   });
 }
