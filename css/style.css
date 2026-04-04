@@ -1837,7 +1837,7 @@ img {
   gap: 20px;
   margin: 64px auto 48px;
   max-width: 640px;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.85rem;
   letter-spacing: 0.05em;
 }
@@ -1874,7 +1874,7 @@ img {
 .contact-form-group label {
   font-size: 0.8rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.05em;
 }
 
@@ -1894,7 +1894,7 @@ img {
 
 .contact-form-group input::placeholder,
 .contact-form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .contact-form-group input:focus,
