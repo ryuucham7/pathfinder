@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CTO's Pathfinder — 技術戦略とAI実装で事業成長を導く</title>
+  <meta name="description" content="CTO経験者が技術戦略・AI実装戦略・開発組織構築を伴走支援。アドバイザリーからハンズオン開発まで。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Cal.com embed -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", {origin:"https://cal.com"});
+    Cal("ui", {"theme":"light","styles":{"branding":{"brandColor":"#c8a50e"}}});
+  </script>
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">CTO's <span>Pathfinder</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#strategy">Strategy</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a data-cal-link="ryuucham/30min" data-cal-config='{"theme":"light"}' class="nav-cta" style="cursor:pointer;">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-gradient-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-eyecatch fade-in">
+        <span class="line">Dialogue.</span>
+        <span class="line">Hands-on.</span>
+        <span class="line">Commit.</span>
+      </div>
+      <p class="hero-tagline fade-in fade-in-delay-1">
+        対話で本質を掴み、<span class="em">自ら手を動かして</span>実装する。<br />
+        CTO/CAIOが<span class="em">あなたの隣で</span>事業を動かす。
+      </p>
+      <p class="hero-description fade-in fade-in-delay-2">
+        複数企業でのCTO・CAIO経験と、実際にAIを実装してきた知見をもとに、少数のクライアントに深く入り込み、技術戦略からAI開発・組織構築まで一貫して伴走します。
+      </p>
+      <div class="hero-actions fade-in fade-in-delay-3">
+        <a data-cal-link="ryuucham/30min" data-cal-config='{"theme":"light"}' class="btn-primary" style="cursor:pointer;">無料相談を予約する →</a>
+        <a href="#strategy" class="btn-ghost">サービス詳細</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== Who We Are ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-en">Who We <span class="accent">Are</span></span>
+        <span class="section-jp">CTO's <span class="shimmer">Pathfinder</span>について</span>
+      </div>
+      <div class="about-layout">
+        <div class="about-lead fade-in">
+          助言だけで終わらない。<br />
+          <span class="em">対話</span>で課題の本質を見極め、<br />
+          <span class="em">自ら手を動かして</span>解決する。<br />
+          それが<span class="shimmer">Pathfinder</span>です。
+        </div>
+        <div class="about-text fade-in fade-in-delay-1">
+          <p>「技術をどう活用すべきか」「AIをどう実装すべきか」「開発組織をどう構築すべきか」——これらの判断は、外から眺めるだけでは下せません。事業の内側に深く入り込み、チームと同じ目線で課題を理解して初めて、本当に機能する戦略が生まれます。</p>
+          <p>CTO's <span class="shimmer">Pathfinder</span>は、少数のクライアントだけを受け持ち、一社一社にどっぷりと浸かるスタイル。複数企業でのCTO・CAIO経験と、実際にAIを実装してきた知見を活かし、経営と技術の架け橋となり、対話とハンズオンで事業成長にコミットします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Profile ===== -->
+  <section class="section profile-section" id="profile">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-en">Pro<span class="accent">file</span></span>
+        <span class="section-jp">プロフィール</span>
+      </div>
+      <div class="profile-layout">
+        <div class="profile-intro fade-in">
+          <div class="profile-photo">
+            <img src="images/profile.jpg" alt="佐藤 龍太" />
+          </div>
+          <div class="profile-name-en">Ryuta Sato</div>
+          <div class="profile-name-jp">佐藤 龍太</div>
+          <div class="profile-role">CTO's <span class="shimmer">Pathfinder</span> 代表</div>
+          <p class="profile-bio">
+            複数企業でのCTO経験、技術顧問、東京工業大学MOTでの技術経営の学びを活かし、テクノロジーと経営の架け橋として事業成長を支援。技術戦略の策定からAI実装、開発組織構築まで、対話とハンズオンでコミットします。
+          </p>
+        </div>
+        <div class="profile-timeline fade-in fade-in-delay-1">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2026</div>
+              <div class="timeline-content">
+                <div class="timeline-title">株式会社Initial Engine 取締役CAIO兼任</div>
+                <div class="timeline-desc">CTO / CAIOとして技術・AI戦略を統括</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2025</div>
+              <div class="timeline-content">
+                <div class="timeline-title">日本CTO協会 幹事就任</div>
+                <div class="timeline-desc">Global WG｜Tech Branding WG｜Community WG</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2024</div>
+              <div class="timeline-content">
+                <div class="timeline-title">株式会社Initial Engine 設立</div>
+                <div class="timeline-desc">取締役CTO</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2023</div>
+              <div class="timeline-content">
+                <div class="timeline-title">テクロスHD CTO / 複数社 技術顧問</div>
+                <div class="timeline-desc">東京工業大学 技術経営専門職MOT｜StartPass技術組織顧問｜不動産テック企業 AI技術顧問｜受託企業 技術顧問｜社内開発組織管掌・事業開発コンサル</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2022</div>
+              <div class="timeline-content">
+                <div class="timeline-title">株式会社テクロスHDに参画</div>
+                <div class="timeline-desc">組織・事業開発</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2021</div>
+              <div class="timeline-content">
+                <div class="timeline-title">日本CTO協会 コミュニティWG Director</div>
+                <div class="timeline-desc">CTO協会の運営・コミュニティ活動</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2020</div>
+              <div class="timeline-content">
+                <div class="timeline-title">複数社の技術顧問業務</div>
+                <div class="timeline-desc">PdM・CTO経験をもとに技術顧問として活動</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2019</div>
+              <div class="timeline-content">
+                <div class="timeline-title">大手銀行・通信会社のアプリケーション開発</div>
+                <div class="timeline-desc">エンタープライズ領域での開発経験</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2015</div>
+              <div class="timeline-content">
+                <div class="timeline-title">グローバルスタートアップ 取締役CTO</div>
+                <div class="timeline-desc">グローバル市場を狙うプロダクト開発｜組織マネジメント｜新規事業創出</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2011</div>
+              <div class="timeline-content">
+                <div class="timeline-title">ワークスアプリケーションズ</div>
+                <div class="timeline-desc">基幹系HRシステム エンジニア｜立命館大学国際関係学部・ブリティッシュコロンビア大学</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Value / Why Pathfinder ===== -->
+  <section class="section value-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-en">Why <span class="accent shimmer">Pathfinder</span></span>
+        <span class="section-jp">選ばれる理由</span>
+      </div>
+
+      <div class="value-statement fade-in">
+        <p class="value-quote">"外部アドバイザー"ではなく、<br />"中にいるCTO"として機能する。</p>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card fade-in fade-in-delay-1">
+          <div class="value-icon">01</div>
+          <h3>少数クライアント、深い関与</h3>
+          <p>同時に支援する企業数に上限を設けています。薄く広くではなく、一社一社にどっぷりと浸かることで、表面的な助言ではたどり着けない本質的な課題解決を実現します。</p>
+        </div>
+        <div class="value-card fade-in fade-in-delay-2">
+          <div class="value-icon">02</div>
+          <h3>CTO/CAIO本人がハンズオン</h3>
+          <p>ジュニアメンバーへの委託は一切ありません。複数企業でのCTO・CAIO経験を持ち、自らAIを実装してきた担当者本人が、戦略策定からコーディングまで直接手を動かします。</p>
+        </div>
+        <div class="value-card fade-in fade-in-delay-3">
+          <div class="value-icon">03</div>
+          <h3>対話から始まる戦略</h3>
+          <p>フレームワークを押し付けるのではなく、まず徹底的に対話する。経営者の言葉、エンジニアの声、プロダクトの現状——すべてを聞いた上で、その企業だけの最適解を一緒に描きます。</p>
+        </div>
+        <div class="value-card fade-in fade-in-delay-4">
+          <div class="value-icon">04</div>
+          <h3>多企業の現場を知る目</h3>
+          <p>スタートアップから上場企業まで、CTO・技術顧問・CAIOとして多くの組織を内側から見てきた視点。「他社ではこうしている」ではなく「あなたの組織にはこれが合う」を提案します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Strategy / Services ===== -->
+  <section class="section strategy-section" id="strategy">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-en">Our <span class="accent">Strategy</span></span>
+        <span class="section-jp">支援領域</span>
+      </div>
+
+      <!-- AI Hero Card -->
+      <div class="strategy-hero fade-in">
+        <div class="strategy-hero-bg">
+          <div class="strategy-hero-gradient"></div>
+          <div class="strategy-hero-label">AI</div>
+        </div>
+        <div class="strategy-hero-content">
+          <div class="strategy-number">Main Strategy</div>
+          <h3>事業・組織へのAI実装</h3>
+          <span class="en">AI Strategy & Hands-on Development</span>
+          <p>「AIの使いどころが定めきれない」——そのモヤモヤに、資料ではなく動くモノで答えます。戦略策定からプロトタイプ開発・本番実装・運用設計まで、CAIOがハンズオンで伴走。PoCで終わらない、事業成果に直結するAI導入を実現します。</p>
+          <div class="strategy-hero-items">
+            <div class="strategy-hero-item">
+              <div class="strategy-hero-item-title">Strategy</div>
+              <div class="strategy-hero-item-desc">AI活用戦略策定・ROI設計・ロードマップ構築</div>
+            </div>
+            <div class="strategy-hero-item">
+              <div class="strategy-hero-item-title">Development</div>
+              <div class="strategy-hero-item-desc">LLMアプリ開発・プロトタイプ・API設計・データ基盤</div>
+            </div>
+            <div class="strategy-hero-item">
+              <div class="strategy-hero-item-title">Operation</div>
+              <div class="strategy-hero-item-desc">運用設計・モニタリング・継続的改善サイクル</div>
+            </div>
+          </div>
+          <div class="strategy-tags">
+            <span class="strategy-tag">AI戦略策定</span>
+            <span class="strategy-tag">LLM / RAG</span>
+            <span class="strategy-tag">プロトタイプ開発</span>
+            <span class="strategy-tag">実装・運用</span>
+            <span class="strategy-tag">AI組織構築</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub Cards -->
+      <div class="strategy-sub-grid">
+        <div class="strategy-sub-card fade-in fade-in-delay-1">
+          <div class="strategy-number">Strategy 02</div>
+          <h3>技術戦略アドバイザリー</h3>
+          <span class="en">Technology Strategy</span>
+          <p>事業戦略と技術ロードマップの整合、技術選定、アーキテクチャ設計、技術負債管理など、CTOの視点で中長期的な技術戦略を策定・伴走します。</p>
+          <div class="strategy-tags">
+            <span class="strategy-tag">技術ロードマップ</span>
+            <span class="strategy-tag">アーキテクチャ設計</span>
+            <span class="strategy-tag">技術選定</span>
+            <span class="strategy-tag">技術負債管理</span>
+          </div>
+        </div>
+        <div class="strategy-sub-card fade-in fade-in-delay-2">
+          <div class="strategy-number">Strategy 03</div>
+          <h3>開発組織構築</h3>
+          <span class="en">Engineering Organization</span>
+          <p>採用戦略、評価制度設計、チームビルディング、開発プロセス最適化まで、スケーラブルな開発組織の構築を支援します。</p>
+          <div class="strategy-tags">
+            <span class="strategy-tag">採用戦略</span>
+            <span class="strategy-tag">評価制度</span>
+            <span class="strategy-tag">プロセス改善</span>
+            <span class="strategy-tag">チームビルディング</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Compass / Method ===== -->
+  <section class="section compass-section" id="method">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-en"><span class="shimmer">Pathfinder</span><br />Compass&trade;</span>
+        <span class="section-jp">独自の診断・改善フレームワーク</span>
+      </div>
+      <div class="compass-intro fade-in">
+        <p>CTO・CAIOとして複数の現場を見てきた経験から生まれた実践的フレームワーク。技術戦略・AI活用・組織・プロセスの4つの方位で現在地を診断し、対話を通じて最適な改善の道筋を描きます。</p>
+      </div>
+      <div class="compass-layout">
+        <!-- North -->
+        <div class="compass-card compass-n fade-in fade-in-delay-1">
+          <div class="compass-direction">
+            <div class="arrow">N</div>
+            <span class="dir-label">North</span>
+          </div>
+          <h3>Vision Alignment</h3>
+          <p>事業戦略と技術・AIロードマップの整合性を評価。「なぜこの技術に投資するのか」を経営とエンジニア双方が腹落ちする形に言語化し、組織全体で同じ方向を向ける状態を作ります。</p>
+        </div>
+        <!-- West -->
+        <div class="compass-card compass-w fade-in fade-in-delay-2">
+          <div class="compass-direction">
+            <div class="arrow">W</div>
+            <span class="dir-label">West</span>
+          </div>
+          <h3>Team & Culture</h3>
+          <p>技術チームの構造・スキル・採用・評価制度を診断。AIネイティブな組織文化の醸成から、エンジニアが成長し続けられる環境づくりまで、組織としての競争力を高めます。</p>
+        </div>
+        <!-- Center compass rose -->
+        <div class="compass-center fade-in">
+          <div class="compass-rose">
+            <div class="compass-rose-ring"></div>
+            <div class="compass-rose-crosshair"></div>
+            <div class="compass-rose-crosshair compass-rose-crosshair-h"></div>
+            <div class="compass-rose-needle"></div>
+            <span class="compass-rose-label compass-rose-n">N</span>
+            <span class="compass-rose-label compass-rose-e">E</span>
+            <span class="compass-rose-label compass-rose-s">S</span>
+            <span class="compass-rose-label compass-rose-w">W</span>
+            <div class="compass-rose-center-dot"></div>
+          </div>
+        </div>
+        <!-- East -->
+        <div class="compass-card compass-e fade-in fade-in-delay-3">
+          <div class="compass-direction">
+            <div class="arrow">E</div>
+            <span class="dir-label">East</span>
+          </div>
+          <h3>AI Readiness</h3>
+          <p>AI活用の成熟度を診断し、自社に最適な導入ステップを設計。CAIO自らが最先端のAI技術を日常的にキャッチアップ・実装しているからこそ、実践的な技術選定とプロトタイプ検証をハンズオンで伴走できます。</p>
+        </div>
+        <!-- South -->
+        <div class="compass-card compass-s fade-in fade-in-delay-4">
+          <div class="compass-direction">
+            <div class="arrow">S</div>
+            <span class="dir-label">South</span>
+          </div>
+          <h3>Process & Delivery</h3>
+          <p>開発プロセスの効率性とデリバリー品質を評価。ボトルネックの特定、技術負債の可視化に加え、AIハーネスエンジニアリングによる開発生産性の飛躍的向上まで、「速く・正しく届ける」仕組みを一緒に構築します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Cases ===== -->
+  <section class="section cases-section" id="cases">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-en">Case Study<span class="accent">.</span></span>
+        <span class="section-jp">支援事例</span>
+      </div>
+      <div class="carousel">
+        <button class="carousel-btn carousel-prev" aria-label="前へ">&larr;</button>
+        <div class="carousel-track">
+
+        <div class="case-card">
+          <div class="case-visual-wrap">
+            <div class="case-visual case-visual-4">
+              <div class="case-visual-inner">
+                <div class="case-kpi">
+                  <span class="case-kpi-number">1</span>
+                  <span class="case-kpi-unit">year ongoing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-category">AI Development</span>
+              <span class="case-plan">パートナー + カスタム開発｜継続中</span>
+            </div>
+            <h3>教育コンテンツ企業 — AI駆動開発でシステム刷新を推進</h3>
+            <div class="case-challenge">レガシーシステムのID統合刷新とシステムリプレースを進めたいが、最適なアプローチが見えていなかった</div>
+            <ul class="case-results">
+              <li>対話で業務フローと技術課題を整理し、AI駆動開発のアプローチを提案</li>
+              <li>ID統合刷新・システムリプレースをハンズオンで推進中</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-visual-wrap">
+            <div class="case-visual case-visual-3">
+              <div class="case-visual-inner">
+                <div class="case-kpi">
+                  <span class="case-kpi-number">20+</span>
+                  <span class="case-kpi-unit">months ongoing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-category">AI / CTO</span>
+              <span class="case-plan">外部CTO｜20ヶ月〜継続中</span>
+            </div>
+            <h3>不動産テック企業 — AI導入とエンジニア組織をゼロから構築</h3>
+            <div class="case-challenge">AI技術の知見がなく、技術組織全体の方向性も定まっていなかった</div>
+            <ul class="case-results">
+              <li>外部CTOとして経営会議に参加し、技術戦略を共同策定</li>
+              <li>隔週でAI・システムの知見を共有し、チーム全体のスキルを底上げ</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-visual-wrap">
+            <div class="case-visual case-visual-2">
+              <div class="case-visual-inner">
+                <div class="case-kpi">
+                  <span class="case-kpi-number">-70</span>
+                  <span class="case-kpi-unit">% incidents</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-category">Organization</span>
+              <span class="case-plan">18ヶ月</span>
+            </div>
+            <h3>シリーズAスタートアップ — 障害70%減と離職率半減</h3>
+            <div class="case-challenge">急成長で技術負債が蓄積し、障害が頻発。エンジニアの離職も相次いでいた</div>
+            <ul class="case-results">
+              <li>チームに入り込み、技術負債を可視化。計画的な解消で障害発生率70%減</li>
+              <li>エンジニアとの対話からボトルネックを特定し、評価制度を設計・導入</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-visual-wrap">
+            <div class="case-visual case-visual-1">
+              <div class="case-visual-inner">
+                <div class="case-kpi">
+                  <span class="case-kpi-number">-2</span>
+                  <span class="case-kpi-unit">months</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-category">Strategy</span>
+              <span class="case-plan">3ヶ月</span>
+            </div>
+            <h3>受託系企業 — MVP開発を2ヶ月短縮</h3>
+            <div class="case-challenge">新規事業のMVP開発にあたり、技術選定と初期メンバーの採用で判断が止まっていた</div>
+            <ul class="case-results">
+              <li>対話を通じて事業要件を整理し、最適な技術スタックを選定</li>
+              <li>採用基準・面接プロセスを一緒に設計し、初期エンジニアの獲得に成功</li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+        <button class="carousel-btn carousel-next" aria-label="次へ">&rarr;</button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pricing ===== -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-en">Pricing<span class="accent">.</span></span>
+        <span class="section-jp">料金</span>
+      </div>
+      <p class="pricing-note fade-in">すべての支援は月額サブスクリプション型。まずはベースサブスクリプションから始めて、<br />課題が見えてきた段階で最適な支援内容をご提案します。</p>
+
+      <div class="pricing-two-col">
+
+        <div class="pricing-card featured fade-in fade-in-delay-1">
+          <div class="pricing-plan-name">ベースサブスクリプション</div>
+          <div class="pricing-target">まずはCTO/CAIOと定期的に対話を始めたい企業様</div>
+          <div class="pricing-amount">
+            <span class="yen">¥</span>
+            <span class="number">10</span>
+            <span class="unit">万円〜 / 月</span>
+          </div>
+          <div class="pricing-tax">税別｜最低3ヶ月〜</div>
+          <ul class="pricing-features">
+            <li>月1回のオンライン相談（60分）</li>
+            <li>Slack / メールでの質問対応（週1回）</li>
+            <li>Pathfinder Compass™ 簡易診断</li>
+          </ul>
+          <p class="pricing-card-note">毎月の対話を通じて御社の文脈を理解し、本質的な課題を一緒に見つけていきます。</p>
+        </div>
+
+        <div class="pricing-card pricing-custom fade-in fade-in-delay-2">
+          <div class="pricing-plan-name">カスタムプラン</div>
+          <div class="pricing-target">AI実装・技術戦略・外部CTO/CAIO など本格的な支援が必要な企業様</div>
+          <div class="pricing-custom-label">個別見積もり</div>
+          <p class="pricing-custom-desc">御社の課題・フェーズ・スコープに応じて、最適な支援内容と価格をご提案します。</p>
+          <ul class="pricing-features">
+            <li>AI実装戦略・ハンズオン開発</li>
+            <li>技術戦略アドバイザリー</li>
+            <li>外部CTO / CAIO</li>
+            <li>開発組織構築・採用支援</li>
+            <li>その他、御社に合わせた柔軟な支援</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pricing-free fade-in">
+        <div class="pricing-free-inner">
+          <div class="pricing-free-text">
+            <div class="pricing-free-title">初回相談（30分）は無料です</div>
+            <p>貴社の課題感をお伺いし、Pathfinderがどうお力になれるかをお話しします。お気軽にどうぞ。</p>
+          </div>
+          <a data-cal-link="ryuucham/30min" data-cal-config='{"theme":"light"}' class="btn-primary" style="cursor:pointer;">無料相談を予約する →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="faq-layout">
+        <div class="section-header fade-in">
+          <span class="section-en">FAQ<span class="accent">.</span></span>
+          <span class="section-jp">よくあるご質問</span>
+        </div>
+        <div class="faq-list fade-in fade-in-delay-1">
+
+          <div class="faq-item">
+            <button class="faq-question">契約途中でプランの変更は可能ですか？</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">はい、月単位でのプラン変更が可能です。上位プランへの変更は随時可能ですが、下位プランへの変更は契約期間満了時となります。</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">対応可能な技術領域を教えてください</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">Web/モバイルアプリケーション開発、クラウドインフラ設計、データ分析基盤構築、AI/ML導入などを得意としています。Python、Ruby on Rails、React、Vue.js、Java、Kotlinなどのスタックに精通しています。</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">AI実装の支援はどのような形で行われますか？</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">AI活用戦略の策定から、プロトタイプ開発、実装、運用設計までハンズオンで支援します。LLMを活用した業務効率化、AI機能の組み込み、データパイプラインの構築など、事業フェーズに応じた最適なアプローチをご提案します。</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">直接の実装作業も依頼できますか？</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">はい。AI実装やプロトタイプ開発などのハンズオン作業にも対応しています。アドバイザリープランに加えて、実装支援が必要な場合は別途お見積りとなります。まずはご相談ください。</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">秘密保持はどのように担保されますか？</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">契約前にNDA（秘密保持契約）を締結します。情報共有はSlackの専用チャンネルとZoom/Google Meetのみで行い、セキュリティに配慮した運用を徹底しています。</div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">対象企業の規模に制限はありますか？</button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">エンジニア組織の有無を問わず、スタートアップから100名規模の企業を主な対象としています。エンジニアがまだいない段階でも、技術戦略の策定や組織の立ち上げから支援可能です。まずはお気軽にご相談ください。</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA / Contact ===== -->
+  <section class="cta-section" id="contact">
+    <div class="cta-bg">
+      <div class="cta-bg-gradient"></div>
+    </div>
+    <div class="container cta-content">
+      <div class="cta-en fade-in">Contact Us<span class="accent">.</span></div>
+      <p class="cta-jp fade-in fade-in-delay-1">
+        まずは30分の無料相談から。<br />貴社の課題やニーズをお伺いし、最適な支援プランをご提案します。
+      </p>
+      <div class="cta-actions fade-in fade-in-delay-2">
+        <a data-cal-link="ryuucham/30min" data-cal-config='{"theme":"light"}' class="btn-cta" style="cursor:pointer;">無料相談を予約する →</a>
+        <a href="mailto:ryuta.sato@path-finder.tech" class="cta-email">ryuta.sato@path-finder.tech</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">&copy; 2025 CTO's <span class="shimmer">Pathfinder</span></div>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#strategy">Strategy</a></li>
+        <li><a href="#cases">Cases</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
