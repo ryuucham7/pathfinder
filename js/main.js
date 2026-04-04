@@ -118,6 +118,26 @@ if (carouselEl) {
   });
 }
 
+// ===== GA4 custom events =====
+function gtagEvent(name, params) {
+  if (typeof gtag === 'function') gtag('event', name, params);
+}
+
+// 無料相談ボタン
+document.querySelectorAll('[data-cal-link]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    gtagEvent('click_consultation_button', { location: btn.closest('section')?.id || 'unknown' });
+  });
+});
+
+// お問い合わせフォーム送信
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', () => {
+    gtagEvent('submit_contact_form');
+  });
+}
+
 // ===== Smooth scroll for anchor links =====
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", (e) => {
