@@ -130,13 +130,12 @@ document.querySelectorAll('[data-cal-link]').forEach((btn) => {
   });
 });
 
-// お問い合わせフォーム送信
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', () => {
-    gtagEvent('submit_contact_form');
+// X DM リンククリック
+document.querySelectorAll('a[href*="x.com/ryuuchamfree"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    gtagEvent('click_x_dm_link');
   });
-}
+});
 
 // ===== Smooth scroll for anchor links =====
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
